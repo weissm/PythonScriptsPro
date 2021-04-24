@@ -5,8 +5,9 @@ import hashlib
 import logging
 
 import voluptuous as vol
+from homeassistant.core import HomeAssistant
 from homeassistant.helpers import config_validation as cv
-from homeassistant.helpers.typing import HomeAssistantType, ServiceCallType
+from homeassistant.helpers.typing import ServiceCallType
 from homeassistant.requirements import async_process_requirements
 
 _LOGGER = logging.getLogger(__name__)
@@ -25,7 +26,7 @@ def md5(data: str):
     return hashlib.md5(data.encode()).hexdigest()
 
 
-async def async_setup(hass: HomeAssistantType, hass_config: dict):
+async def async_setup(hass: HomeAssistant, hass_config: dict):
     config: dict = hass_config[DOMAIN]
     if CONF_REQUIREMENTS in config:
         hass.async_create_task(async_process_requirements(
