@@ -1,7 +1,7 @@
 {
   "domain": "pypro_script",
   "name": "Python Scripts Pro",
-  "version": "1.0a",
+  "version": "1.0.1",
   "documentation": "https://github.com/weissm/PythonScriptsPro",
   "dependencies": [],
   "codeowners": [
