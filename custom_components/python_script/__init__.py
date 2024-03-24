@@ -15,7 +15,7 @@ from homeassistant.requirements import async_process_requirements
 
 _LOGGER = logging.getLogger(__name__)
 
-DOMAIN = "python_script"
+DOMAIN = "pypro_script"
 CONF_REQUIREMENTS = "requirements"
 
 CONFIG_SCHEMA = vol.Schema(
